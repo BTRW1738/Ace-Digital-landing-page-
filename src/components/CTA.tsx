@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
-import { supabase } from '../lib/supabase';
-import type { ConsultationRequest } from '../lib/supabase';
 
 const CTA = () => {
   const [formData, setFormData] = useState({
@@ -30,37 +28,13 @@ const CTA = () => {
     setIsSubmitting(true);
     setError('');
 
-    console.log('🚀 Form submission started');
-    console.log('📝 Form data:', formData);
+    // Simulate form submission for now
+    console.log('Form submitted:', formData);
 
     try {
-      // Prepare the consultation request data
-      const consultationData: Omit<ConsultationRequest, 'id' | 'created_at'> = {
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        business_name: formData.business_name.trim(),
-        use_case: formData.use_case.trim(),
-        selected_service: formData.selected_service,
-        additional_info: formData.additional_info.trim() || null,
-        status: 'pending'
-      };
-
-      console.log('📤 Prepared consultation data:', consultationData);
-
-      // Insert into Supabase
-      const { data, error: supabaseError } = await supabase
-        .from('consultation_requests')
-        .insert([consultationData])
-        .select();
-
-      console.log('📥 Supabase response:', { data, error: supabaseError });
-
-      if (supabaseError) {
-        console.error('❌ Supabase error:', supabaseError);
-        throw supabaseError;
-      }
-
-      console.log('✅ Consultation request saved successfully:', data);
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       setIsSubmitted(true);
       
       // Reset form
@@ -74,7 +48,7 @@ const CTA = () => {
       });
 
     } catch (err) {
-      console.error('💥 Form submission error:', err);
+      console.error('Form submission error:', err);
       setError(err instanceof Error ? err.message : 'An unexpected error occurred');
     } finally {
       setIsSubmitting(false);
