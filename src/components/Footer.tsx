@@ -2,11 +2,11 @@ import React from 'react';
 import { Spade, Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 interface FooterProps {
-  onPrivacyClick: () => void;
-  onTermsClick: () => void;
+  onShowPrivacyPolicy: () => void;
+  onShowTermsOfService: () => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
+const Footer: React.FC<FooterProps> = ({ onShowPrivacyPolicy, onShowTermsOfService }) => {
   // Custom X (Twitter) icon component since lucide-react doesn't have the new X logo
   const XIcon = ({ className }: { className?: string }) => (
     <svg
@@ -80,7 +80,7 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
             <ul className="space-y-2 text-slate-300">
               <li>
                 <button
-                  onClick={onPrivacyClick}
+                  onClick={onShowPrivacyPolicy}
                   className="hover:text-cyan-400 transition-colors cursor-pointer text-left"
                 >
                   Privacy Policy
@@ -88,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
               </li>
               <li>
                 <button
-                  onClick={onTermsClick}
+                  onClick={onShowTermsOfService}
                   className="hover:text-cyan-400 transition-colors cursor-pointer text-left"
                 >
                   Terms of Service
@@ -147,13 +147,13 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
             </p>
             <div className="flex items-center space-x-6 text-sm text-slate-400">
               <button
-                onClick={onPrivacyClick}
+                onClick={onShowPrivacyPolicy}
                 className="hover:text-cyan-400 transition-colors"
               >
                 Privacy Policy
               </button>
               <button
-                onClick={onTermsClick}
+                onClick={onShowTermsOfService}
                 className="hover:text-cyan-400 transition-colors"
               >
                 Terms of Service

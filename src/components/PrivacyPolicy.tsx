@@ -2,17 +2,17 @@ import React from 'react';
 import { ArrowLeft, Shield, Eye, Database, Mail } from 'lucide-react';
 
 interface PrivacyPolicyProps {
-  onBack: () => void;
+  onClose: () => void;
 }
 
-const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onClose }) => {
   return (
     <div className="min-h-screen bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <button
-            onClick={onBack}
+            onClick={onClose}
             className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 mb-6"
           >
             <ArrowLeft className="w-5 h-5" />
