@@ -50,38 +50,14 @@ const Hero = () => {
       <div className="absolute bottom-28 left-1/5 w-1 h-1 bg-blue-300 rounded-full opacity-40" style={{animation: 'pulse 3.8s ease-in-out infinite 3.1s'}}></div>
       
       {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
+      <div className="absolute top-6 right-4 sm:top-8 sm:right-8 z-20">
         <div className="flex flex-col space-y-4">
           {/* Instagram Link */}
           <a
             href="https://www.instagram.com/acexdigital/"
             target="_blank"
             rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50"
+            className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/70 backdrop-blur-sm px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50 shadow-lg"
             aria-label="Follow us on Instagram"
           >
             <svg className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -154,7 +130,6 @@ const Hero = () => {
         
       </div>
     </section>
-  )
   );
 };
 
