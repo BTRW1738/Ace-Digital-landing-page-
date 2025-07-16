@@ -23,10 +23,40 @@ const CTA = () => {
     // Debug logging
     console.log('Form submission started');
     console.log('Form data:', formData);
-    console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
-    console.log('Supabase Anon Key exists:', !!import.meta.env.VITE_SUPABASE_ANON_KEY);
 
     try {
+      // Check if Supabase is properly configured
+      const hasSupabaseConfig = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY;
+      
+      if (!hasSupabaseConfig) {
+        // Fallback: Just show success message (for demo purposes)
+        console.warn('Supabase not configured - showing demo success');
+        setIsSubmitted(true);
+        
+        // Track form submission for analytics if available
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            event_category: 'engagement',
+            event_label: 'consultation_request_demo',
+            value: 1
+          });
+        }
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          businessName: '',
+          useCase: '',
+          selectedService: '',
+          additionalInfo: ''
+        });
+
+        // Hide success message after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000);
+        return;
+      }
+
       // Prepare data for Supabase
       const consultationData: ConsultationRequest = {
         name: formData.name,
@@ -55,6 +85,15 @@ const CTA = () => {
       console.log('Consultation request saved successfully:', data);
       setIsSubmitted(true);
       
+      // Track form submission for analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'consultation_request',
+          value: 1
+        });
+      }
+      
       // Reset form
       setFormData({
         name: '',
@@ -78,7 +117,7 @@ const CTA = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
