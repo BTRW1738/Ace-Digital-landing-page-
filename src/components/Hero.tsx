@@ -50,54 +50,14 @@ const Hero = () => {
       <div className="absolute bottom-28 left-1/5 w-1 h-1 bg-blue-300 rounded-full opacity-40" style={{animation: 'pulse 3.8s ease-in-out infinite 3.1s'}}></div>
       
       {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
+      <div className="absolute top-6 sm:top-8 lg:top-12 right-6 sm:right-8 lg:right-12 z-30">
+        <div className="flex flex-col space-y-4 sm:space-y-5">
           {/* Instagram Link */}
           <a
             href="https://www.instagram.com/acexdigital/"
             target="_blank"
             rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-      {/* Social Media Links - Top Right */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex flex-col space-y-4">
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/acexdigital/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50"
+            className="group flex items-center space-x-2 sm:space-x-3 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-900/90 backdrop-blur-lg px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-slate-700/60 hover:border-cyan-400/60 shadow-2xl hover:shadow-cyan-400/20"
             aria-label="Follow us on Instagram"
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -167,10 +127,8 @@ const Hero = () => {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </span>
         </button>
-        
       </div>
     </section>
-  )
   );
 };
 
