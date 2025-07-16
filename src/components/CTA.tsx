@@ -19,6 +19,12 @@ const CTA = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
+    
+    // Debug logging
+    console.log('Form submission started');
+    console.log('Form data:', formData);
+    console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+    console.log('Supabase Anon Key exists:', !!import.meta.env.VITE_SUPABASE_ANON_KEY);
 
     try {
       // Prepare data for Supabase
@@ -31,17 +37,22 @@ const CTA = () => {
         additional_info: formData.additionalInfo || undefined,
       };
 
+      console.log('Prepared consultation data:', consultationData);
+
       // Insert into Supabase
       const { data, error: supabaseError } = await supabase
         .from('consultation_requests')
         .insert([consultationData])
         .select();
 
+      console.log('Supabase response:', { data, error: supabaseError });
+
       if (supabaseError) {
+        console.error('Supabase error details:', supabaseError);
         throw supabaseError;
       }
 
-      console.log('Consultation request saved:', data);
+      console.log('Consultation request saved successfully:', data);
       setIsSubmitted(true);
       
       // Reset form
@@ -57,10 +68,13 @@ const CTA = () => {
       // Hide success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err) {
-      console.error('Error submitting consultation request:', err);
+      console.error('Complete error details:', err);
+      console.error('Error message:', err instanceof Error ? err.message : 'Unknown error');
+      console.error('Error stack:', err instanceof Error ? err.stack : 'No stack trace');
       setError(err instanceof Error ? err.message : 'An unexpected error occurred');
     } finally {
       setIsSubmitting(false);
+      console.log('Form submission completed');
     }
   };
 
