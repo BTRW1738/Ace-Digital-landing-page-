@@ -207,7 +207,7 @@ const CTA = () => {
               
               <div>
                 <label htmlFor="useCase" className="block text-sm font-medium text-slate-300 mb-2">
-                  What's your biggest challenge with lead generation? *
+                  What's the biggest challenge you're facing and what do you want to achieve? *
                 </label>
                 <textarea
                   id="useCase"
@@ -217,7 +217,7 @@ const CTA = () => {
                   value={formData.useCase}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                  placeholder="Tell us about your current lead generation challenges and what you'd like to achieve..."
+                  placeholder="Describe your main business challenges and the goals you want to accomplish..."
                 />
               </div>
               
