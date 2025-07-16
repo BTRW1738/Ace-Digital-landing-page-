@@ -20,22 +20,26 @@ const About = () => {
         </div>
         
         {/* Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           {/* Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center">
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
-              At Ace Digital, we're pioneering the future of business automation with cutting-edge AI technology. 
-              Our intelligent systems don't just automate tasks—they think, learn, and adapt to deliver exceptional 
-              results that scale your business exponentially.
+              At Ace Digital, we empower businesses to automate smarter and scale faster using cutting-edge AI automation systems.
             </p>
             
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
-              From capturing and nurturing leads to seamlessly integrating with your existing CRM systems, 
-              we've helped hundreds of businesses achieve <span className="text-cyan-400 font-semibold">300%+ growth</span> 
-              in qualified leads while reducing operational costs by up to <span className="text-cyan-400 font-semibold">70%</span>.
+              We help eliminate time-wasting manual tasks, streamline operations, and increase efficiency across your workflow — so you can focus on what really matters: growth and impact.
             </p>
             
-            <div className="flex flex-wrap gap-4 pt-4">
+            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
+              Whether you're a small team or a growing enterprise, our solutions reduce stress, boost productivity, and turn chaos into control.
+            </p>
+            
+            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
+              Ace Digital exists to solve the hidden inefficiencies that cost you time and money. If you're ready to operate like a high-level business — we build the systems to get you there.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 pt-8">
               <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <Brain className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-medium">AI-Powered</span>
@@ -47,38 +51,6 @@ const About = () => {
               <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <Rocket className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-medium">Scalable</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl"></div>
-              <div className="relative space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Lead Conversion Rate</span>
-                  <span className="text-2xl font-bold text-cyan-400">+300%</span>
-                </div>
-                <div className="w-full bg-slate-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full w-3/4 animate-pulse"></div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Cost Reduction</span>
-                  <span className="text-2xl font-bold text-blue-400">70%</span>
-                </div>
-                <div className="w-full bg-slate-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-blue-400 to-cyan-400 h-2 rounded-full w-4/5 animate-pulse"></div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Response Time</span>
-                  <span className="text-2xl font-bold text-cyan-400">&lt;1s</span>
-                </div>
-                <div className="w-full bg-slate-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full w-full animate-pulse"></div>
-                </div>
               </div>
             </div>
           </div>

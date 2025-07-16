@@ -14,10 +14,17 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.1),transparent_50%)]"></div>
       </div>
       
-      {/* Floating Elements */}
+      {/* Enhanced Floating Elements */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute top-32 left-1/4 w-1 h-1 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute top-60 right-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-60 right-10 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-1/3 left-16 w-2 h-2 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute top-1/2 left-8 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 right-16 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {/* Logo */}
@@ -54,7 +61,6 @@ const Hero = () => {
           onClick={scrollToForm}
           className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></span>
           <span className="relative flex items-center space-x-2">
             <span>Book a Free Strategy Call</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
