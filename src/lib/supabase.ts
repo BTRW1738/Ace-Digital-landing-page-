@@ -16,6 +16,8 @@ export interface ConsultationRequest {
   email: string;
   business_name: string;
   use_case: string;
+  selected_service: string;
+  additional_info?: string;
   status?: string;
   created_at?: string;
 }

@@ -7,7 +7,9 @@ const CTA = () => {
     name: '',
     email: '',
     businessName: '',
-    useCase: ''
+    useCase: '',
+    selectedService: '',
+    additionalInfo: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +27,8 @@ const CTA = () => {
         email: formData.email,
         business_name: formData.businessName,
         use_case: formData.useCase,
+        selected_service: formData.selectedService,
+        additional_info: formData.additionalInfo || undefined,
       };
 
       // Insert into Supabase
@@ -45,7 +49,9 @@ const CTA = () => {
         name: '',
         email: '',
         businessName: '',
-        useCase: ''
+        useCase: '',
+        selectedService: '',
+        additionalInfo: ''
       });
 
       // Hide success message after 5 seconds
@@ -176,6 +182,30 @@ const CTA = () => {
               </div>
               
               <div>
+                <label htmlFor="selectedService" className="block text-sm font-medium text-slate-300 mb-2">
+                  Selected Service *
+                </label>
+                <select
+                  id="selectedService"
+                  name="selectedService"
+                  required
+                  value={formData.selectedService}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                >
+                  <option value="" disabled className="text-slate-400">
+                    Select a service
+                  </option>
+                  <option value="A.I agent">A.I agent</option>
+                  <option value="Lead generation">Lead generation</option>
+                  <option value="CRM integration">CRM integration</option>
+                  <option value="Workflow automation">Workflow automation</option>
+                  <option value="Chatbot funnel">Chatbot funnel</option>
+                  <option value="Unsure">Unsure</option>
+                </select>
+              </div>
+              
+              <div>
                 <label htmlFor="useCase" className="block text-sm font-medium text-slate-300 mb-2">
                   What's your biggest challenge with lead generation? *
                 </label>
@@ -189,6 +219,27 @@ const CTA = () => {
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                   placeholder="Tell us about your current lead generation challenges and what you'd like to achieve..."
                 />
+              </div>
+              
+              <div>
+                <label htmlFor="additionalInfo" className="block text-sm font-medium text-slate-300 mb-2">
+                  Additional Information
+                </label>
+                <textarea
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  rows={4}
+                  maxLength={500}
+                  value={formData.additionalInfo}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  placeholder="Please share any specific requirements, questions, or details about your project..."
+                />
+                <div className="text-right mt-1">
+                  <span className="text-xs text-slate-400">
+                    {formData.additionalInfo.length}/500 characters
+                  </span>
+                </div>
               </div>
               
               <button
