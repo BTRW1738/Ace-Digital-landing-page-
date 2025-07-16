@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
+import { supabase, type ConsultationRequest } from '../lib/supabase';
 
 const CTA = () => {
   const [formData, setFormData] = useState({
@@ -28,13 +29,24 @@ const CTA = () => {
     setIsSubmitting(true);
     setError('');
 
-    // Simulate form submission for now
-    console.log('Form submitted:', formData);
-
     try {
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const consultationData: ConsultationRequest = {
+        name: formData.name,
+        email: formData.email,
+        business_name: formData.business_name,
+        use_case: formData.use_case,
+        selected_service: formData.selected_service,
+        additional_info: formData.additional_info || null
+      };
+
+      const { error: insertError } = await supabase
+        .from('consultation_requests')
+        .insert([consultationData]);
+
+      if (insertError) {
+        throw insertError;
+      }
+
       setIsSubmitted(true);
       
       // Reset form
