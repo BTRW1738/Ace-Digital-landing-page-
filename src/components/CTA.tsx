@@ -30,6 +30,21 @@ const CTA = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent_70%)]"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      
+      {/* Starry sky animated blue dots */}
+      <div className="absolute top-16 left-22 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-32 right-30 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-48 left-38 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute top-64 right-22 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-64 left-30 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-48 right-38 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute bottom-32 left-22 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-16 right-30 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-20 left-2/5 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-56 right-2/5 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-56 left-1/7 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 right-1/7 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Section Header */}

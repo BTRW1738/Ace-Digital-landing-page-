@@ -15,6 +15,7 @@ const Hero = () => {
       </div>
       
       {/* Enhanced Floating Elements */}
+      {/* Starry sky animated blue dots */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse"></div>
@@ -25,6 +26,28 @@ const Hero = () => {
       <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-blue-300 rounded-full animate-ping"></div>
       <div className="absolute top-1/2 left-8 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 right-16 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+      
+      {/* Additional starry sky dots for enhanced effect */}
+      <div className="absolute top-16 right-32 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute top-80 left-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-96 right-16 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-80 left-40 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-96 right-40 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-24 left-3/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-72 right-1/4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-32 left-1/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-48 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-48 right-1/2 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute top-64 left-20 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-64 right-20 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-88 right-8 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-88 left-8 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute top-52 right-12 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-52 left-12 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-36 left-2/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-36 right-2/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-28 right-1/5 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-28 left-1/5 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {/* Logo */}
@@ -59,9 +82,8 @@ const Hero = () => {
         {/* CTA Button */}
         <button
           onClick={scrollToForm}
-          className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-        >
-          <span className="relative flex items-center space-x-2">
+          className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+          <span className="flex items-center space-x-2">
             <span>Book a Free Strategy Call</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </span>

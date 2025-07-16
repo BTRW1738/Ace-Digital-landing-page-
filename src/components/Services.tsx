@@ -35,6 +35,20 @@ const Services = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
       
+      {/* Starry sky animated blue dots */}
+      <div className="absolute top-12 left-20 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-28 right-28 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-44 left-36 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute top-60 right-20 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-60 left-28 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-44 right-36 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute bottom-28 left-20 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-12 right-28 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-16 left-2/3 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-52 right-2/3 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-52 left-1/5 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-16 right-1/5 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+      
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

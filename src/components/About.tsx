@@ -8,6 +8,20 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
       
+      {/* Starry sky animated blue dots */}
+      <div className="absolute top-14 left-18 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-30 right-26 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-46 left-34 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute top-62 right-18 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-62 left-26 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-46 right-34 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute bottom-30 left-18 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-14 right-26 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-18 left-3/5 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-54 right-3/5 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
+      <div className="absolute bottom-54 left-1/6 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-18 right-1/6 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+      
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
