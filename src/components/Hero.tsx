@@ -73,6 +73,14 @@ const Hero = () => {
             href="https://www.instagram.com/acexdigital/"
             target="_blank"
             rel="noopener noreferrer"
+      {/* Social Media Links - Top Right */}
+      <div className="absolute top-8 right-8 z-20">
+        <div className="flex flex-col space-y-4">
+          {/* Instagram Link */}
+          <a
+            href="https://www.instagram.com/acexdigital/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50"
             aria-label="Follow us on Instagram"
           >
@@ -146,7 +154,6 @@ const Hero = () => {
         
       </div>
     </section>
-  )
   );
 };
 
