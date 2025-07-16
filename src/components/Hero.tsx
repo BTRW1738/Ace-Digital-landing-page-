@@ -57,13 +57,21 @@ const Hero = () => {
             href="https://www.instagram.com/acexdigital/"
             target="_blank"
             rel="noopener noreferrer"
+      {/* Social Media Links - Top Right */}
+      <div className="absolute top-8 right-8 z-20">
+        <div className="flex flex-col space-y-4">
+          {/* Instagram Link */}
+          <a
+            href="https://www.instagram.com/acexdigital/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50"
             aria-label="Follow us on Instagram"
           >
             <svg className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path fillRule="evenodd" d="M12.017 0C8.396 0 7.929.01 6.71.048 5.493.087 4.73.222 4.058.42a5.916 5.916 0 0 0-2.134 1.384A5.916 5.916 0 0 0 .42 4.058C.222 4.73.087 5.493.048 6.71.01 7.929 0 8.396 0 12.017c0 3.624.01 4.09.048 5.309.039 1.217.174 1.98.372 2.652a5.916 5.916 0 0 0 1.384 2.134 5.916 5.916 0 0 0 2.134 1.384c.672.198 1.435.333 2.652.372 1.219.038 1.686.048 5.309.048 3.624 0 4.09-.01 5.309-.048 1.217-.039 1.98-.174 2.652-.372a5.916 5.916 0 0 0 2.134-1.384 5.916 5.916 0 0 0 1.384-2.134c.198-.672.333-1.435.372-2.652.038-1.219.048-1.686.048-5.309 0-3.621-.01-4.088-.048-5.307-.039-1.217-.174-1.98-.372-2.652A5.916 5.916 0 0 0 19.58 1.404 5.916 5.916 0 0 0 17.446.42c-.672-.198-1.435-.333-2.652-.372C13.575.01 13.108 0 9.484 0H12.017zm-.017 1.8h.017c3.568 0 3.993.01 5.204.048 1.256.057 1.937.267 2.39.444.6.233 1.03.511 1.48.961.45.45.728.88.961 1.48.177.453.387 1.134.444 2.39.038 1.211.048 1.636.048 5.204 0 3.568-.01 3.993-.048 5.204-.057 1.256-.267 1.937-.444 2.39a3.99 3.99 0 0 1-.961 1.48 3.99 3.99 0 0 1-1.48.961c-.453.177-1.134.387-2.39.444-1.211.038-1.636.048-5.204.048-3.568 0-3.993-.01-5.204-.048-1.256-.057-1.937-.267-2.39-.444a3.99 3.99 0 0 1-1.48-.961 3.99 3.99 0 0 1-.961-1.48c-.177-.453-.387-1.134-.444-2.39-.038-1.211-.048-1.636-.048-5.204 0-3.568.01-3.993.048-5.204.057-1.256.267-1.937.444-2.39.233-.6.511-1.03.961-1.48a3.99 3.99 0 0 1 1.48-.961c.453-.177 1.134-.387 2.39-.444 1.211-.038 1.636-.048 5.204-.048zm0 3.06a7.157 7.157 0 1 0 0 14.314 7.157 7.157 0 0 0 0-14.314zm0 11.8a4.643 4.643 0 1 1 0-9.286 4.643 4.643 0 0 1 0 9.286zm9.108-12.058a1.674 1.674 0 1 1-3.348 0 1.674 1.674 0 0 1 3.348 0z" clipRule="evenodd" />
             </svg>
-            <span className="group-hover:translate-x-1 transition-transform duration-300 text-sm">@acexdigital</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300 text-xs sm:text-sm">@acexdigital</span>
           </a>
           
           {/* X (Twitter) Link */}
@@ -71,7 +79,7 @@ const Hero = () => {
             href="https://x.com/AceXDigital"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50"
+            className="group flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-all duration-300 bg-slate-800/70 backdrop-blur-sm px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg border border-slate-700/50 hover:border-cyan-400/50 shadow-lg"
             aria-label="Follow us on X (formerly Twitter)"
           >
             <svg
@@ -82,7 +90,7 @@ const Hero = () => {
             >
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
-            <span className="group-hover:translate-x-1 transition-transform duration-300 text-sm">@AceXDigital</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300 text-xs sm:text-sm">@AceXDigital</span>
           </a>
         </div>
       </div>
