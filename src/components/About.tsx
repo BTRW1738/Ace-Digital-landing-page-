@@ -9,18 +9,18 @@ const About = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
       
       {/* Starry sky animated blue dots */}
-      <div className="absolute top-14 left-18 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-30 right-26 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
-      <div className="absolute top-46 left-34 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
-      <div className="absolute top-62 right-18 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
-      <div className="absolute bottom-62 left-26 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-46 right-34 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
-      <div className="absolute bottom-30 left-18 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-14 right-26 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></div>
-      <div className="absolute top-18 left-3/5 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-54 right-3/5 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping"></div>
-      <div className="absolute bottom-54 left-1/6 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-18 right-1/6 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+      <div className="absolute top-14 left-18 w-1 h-1 bg-cyan-400 rounded-full opacity-40" style={{animation: 'pulse 4.5s ease-in-out infinite 1.2s'}}></div>
+      <div className="absolute top-30 right-26 w-1 h-1 bg-blue-400 rounded-full opacity-50" style={{animation: 'pulse 3.7s ease-in-out infinite 2.3s'}}></div>
+      <div className="absolute top-46 left-34 w-1 h-1 bg-cyan-300 rounded-full opacity-35" style={{animation: 'pulse 5.3s ease-in-out infinite 0.8s'}}></div>
+      <div className="absolute top-62 right-18 w-1 h-1 bg-blue-300 rounded-full opacity-45" style={{animation: 'pulse 4.1s ease-in-out infinite 2.7s'}}></div>
+      <div className="absolute bottom-62 left-26 w-1 h-1 bg-cyan-400 rounded-full opacity-40" style={{animation: 'pulse 3.4s ease-in-out infinite 1.5s'}}></div>
+      <div className="absolute bottom-46 right-34 w-1 h-1 bg-blue-400 rounded-full opacity-55" style={{animation: 'pulse 5.8s ease-in-out infinite 0.3s'}}></div>
+      <div className="absolute bottom-30 left-18 w-1 h-1 bg-cyan-300 rounded-full opacity-45" style={{animation: 'pulse 4.6s ease-in-out infinite 3.1s'}}></div>
+      <div className="absolute bottom-14 right-26 w-1 h-1 bg-blue-400 rounded-full opacity-35" style={{animation: 'pulse 3.2s ease-in-out infinite 1.9s'}}></div>
+      <div className="absolute top-18 left-3/5 w-1 h-1 bg-cyan-400 rounded-full opacity-50" style={{animation: 'pulse 5.1s ease-in-out infinite 2.4s'}}></div>
+      <div className="absolute top-54 right-3/5 w-1 h-1 bg-blue-300 rounded-full opacity-40" style={{animation: 'pulse 4.8s ease-in-out infinite 0.6s'}}></div>
+      <div className="absolute bottom-54 left-1/6 w-1 h-1 bg-cyan-300 rounded-full opacity-45" style={{animation: 'pulse 3.9s ease-in-out infinite 2.8s'}}></div>
+      <div className="absolute bottom-18 right-1/6 w-1 h-1 bg-blue-400 rounded-full opacity-35" style={{animation: 'pulse 5.6s ease-in-out infinite 1.7s'}}></div>
       
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
