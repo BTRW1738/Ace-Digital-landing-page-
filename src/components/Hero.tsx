@@ -170,6 +170,7 @@ const Hero = () => {
         
       </div>
     </section>
+  )
   );
 };
 
