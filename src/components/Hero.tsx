@@ -83,6 +83,7 @@ const Hero = () => {
         <button
           onClick={scrollToForm}
           className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+        >
           <span className="flex items-center space-x-2">
             <span>Book a Free Strategy Call</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
