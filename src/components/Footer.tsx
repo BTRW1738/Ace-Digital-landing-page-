@@ -1,7 +1,12 @@
 import React from 'react';
 import { Spade, Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  onPrivacyClick: () => void;
+  onTermsClick: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
   // Custom X (Twitter) icon component since lucide-react doesn't have the new X logo
   const XIcon = ({ className }: { className?: string }) => (
     <svg
@@ -58,7 +63,7 @@ const Footer = () => {
           </div>
           
           {/* Services */}
-          <div className="space-y-4 md:col-span-1">
+          <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
             <ul className="space-y-2 text-slate-300">
               <li className="hover:text-cyan-400 transition-colors cursor-pointer">AI Virtual Agents</li>
@@ -69,8 +74,33 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Social Media */}
+          {/* Legal Links */}
           <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Legal</h4>
+            <ul className="space-y-2 text-slate-300">
+              <li>
+                <button
+                  onClick={onPrivacyClick}
+                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={onTermsClick}
+                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left"
+                >
+                  Terms of Service
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mt-8">
+          {/* Social Media */}
+          <div className="space-y-4 md:col-span-1">
             <h4 className="text-lg font-semibold text-white">Follow Us</h4>
             <div className="space-y-3">
               {/* Instagram Link */}
@@ -98,13 +128,38 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          
+          {/* Business Information */}
+          <div className="space-y-4 md:col-span-1">
+            <h4 className="text-lg font-semibold text-white">Business Information</h4>
+            <div className="text-slate-300 text-sm space-y-1">
+              <p>Ace Digital - AI Automation Solutions</p>
+              <p>Registered in England and Wales</p>
+            </div>
+          </div>
         </div>
         
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800 text-center">
-          <p className="text-slate-400">
-            © 2024 Ace Digital. All rights reserved.
-          </p>
+        <div className="mt-12 pt-8 border-t border-slate-800">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-slate-400 text-sm">
+              © 2024 Ace Digital. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 text-sm text-slate-400">
+              <button
+                onClick={onPrivacyClick}
+                className="hover:text-cyan-400 transition-colors"
+              >
+                Privacy Policy
+              </button>
+              <button
+                onClick={onTermsClick}
+                className="hover:text-cyan-400 transition-colors"
+              >
+                Terms of Service
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
