@@ -135,6 +135,7 @@ const Hero = () => {
         </button>
         
       </div>
+  )
   );
 };
 
