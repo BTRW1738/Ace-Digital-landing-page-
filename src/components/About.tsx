@@ -56,15 +56,15 @@ const About = () => {
             <div className="flex flex-wrap justify-center gap-4 pt-8">
               <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <Brain className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm font-medium">AI-Powered</span>
+                <span className="text-sm font-medium text-white">AI-Powered</span>
               </div>
               <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <Target className="w-5 h-5 text-blue-400" />
-                <span className="text-sm font-medium">Results-Driven</span>
+                <span className="text-sm font-medium text-white">Results-Driven</span>
               </div>
               <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">
                 <Rocket className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm font-medium">Scalable</span>
+                <span className="text-sm font-medium text-white">Scalable</span>
               </div>
             </div>
           </div>
