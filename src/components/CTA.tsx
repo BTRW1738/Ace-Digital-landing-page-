@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { supabase, ConsultationRequest } from '../lib/supabase';
 
 const CTA = () => {
   const [formData, setFormData] = useState({
@@ -9,13 +10,52 @@ const CTA = () => {
     useCase: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // Prepare data for Supabase
+      const consultationData: ConsultationRequest = {
+        name: formData.name,
+        email: formData.email,
+        business_name: formData.businessName,
+        use_case: formData.useCase,
+      };
+
+      // Insert into Supabase
+      const { data, error: supabaseError } = await supabase
+        .from('consultation_requests')
+        .insert([consultationData])
+        .select();
+
+      if (supabaseError) {
+        throw supabaseError;
+      }
+
+      console.log('Consultation request saved:', data);
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        businessName: '',
+        useCase: ''
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (err) {
+      console.error('Error submitting consultation request:', err);
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -71,10 +111,20 @@ const CTA = () => {
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h4 className="text-2xl font-bold text-green-400 mb-2">Thank You!</h4>
-              <p className="text-slate-300">We'll be in touch within 24 hours to schedule your strategy call.</p>
+              <p className="text-slate-300">
+                Your consultation request has been submitted successfully! We'll be in touch within 24 hours to schedule your strategy call.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+                  <p className="text-red-400 text-sm">
+                    <strong>Error:</strong> {error}
+                  </p>
+                </div>
+              )}
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
@@ -143,12 +193,15 @@ const CTA = () => {
               
               <button
                 type="submit"
-                className="w-full group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+                disabled={isSubmitting}
+                className="w-full group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative flex items-center space-x-2">
-                  <span>Book My Free Strategy Call</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>{isSubmitting ? 'Submitting...' : 'Book My Free Strategy Call'}</span>
+                  {!isSubmitting && (
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  )}
                 </span>
               </button>
             </form>
