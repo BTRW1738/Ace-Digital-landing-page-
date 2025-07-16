@@ -29,6 +29,13 @@ const CTA = () => {
     setIsSubmitting(true);
     setError('');
 
+    // Debug logging for production
+    console.log('Environment check:', {
+      supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
+      hasAnonKey: !!import.meta.env.VITE_SUPABASE_ANON_KEY,
+      environment: import.meta.env.MODE
+    });
+
     try {
       const consultationData: ConsultationRequest = {
         name: formData.name,
@@ -44,9 +51,11 @@ const CTA = () => {
         .insert([consultationData]);
 
       if (insertError) {
+        console.error('Supabase insert error:', insertError);
         throw insertError;
       }
 
+      console.log('Form submitted successfully to Supabase');
       setIsSubmitted(true);
       
       // Reset form
@@ -61,6 +70,10 @@ const CTA = () => {
 
     } catch (err) {
       console.error('Form submission error:', err);
+      console.error('Error details:', {
+        message: err instanceof Error ? err.message : 'Unknown error',
+        supabaseConfigured: !!(import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY)
+      });
       setError(err instanceof Error ? err.message : 'An unexpected error occurred');
     } finally {
       setIsSubmitting(false);
